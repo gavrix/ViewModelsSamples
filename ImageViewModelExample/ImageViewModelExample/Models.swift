@@ -11,7 +11,9 @@ import Foundation
 
 struct User {
     var username: String
+    var userpicUrl: String
     init(json: [String: AnyObject]) {
         self.username = (json["login"] as? String) ?? ""
+        self.userpicUrl = (json["avatar_url"] as? String) ?? ""
     }
 }

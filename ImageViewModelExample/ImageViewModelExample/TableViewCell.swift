@@ -31,7 +31,7 @@ class UserTableViewCell: UITableViewCell {
             [unowned self] in
             let transition = CATransition()
             transition.type = kCATransitionFade
-            self.imageView?.layer.addAnimation(transition, forKey: nil)
+            self.userpicImageView?.layer.addAnimation(transition, forKey: nil)
         }
     }
     
@@ -51,5 +51,8 @@ class UserItemViewModel {
     
     init() {
         self.username = AnyProperty(initialValue: nil, producer: user.producer.map { $0?.username } )
+        self.userpicViewModel.image <~ user.producer
+            .map { $0?.userpicUrl }
+            .map { $0.flatMap { NSURL(string: $0) }.flatMap { ImageDescriptor.URL($0)} }
     }
 }

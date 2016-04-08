@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C1649991CB7364E006AD007 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1649981CB7364E006AD007 /* ImageProvider.swift */; };
 		3C1649A81CB73700006AD007 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1649A71CB73700006AD007 /* Utils.swift */; };
+		3C1649AA1CB73B7E006AD007 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1649A91CB73B7E006AD007 /* TableViewCell.swift */; };
 		3C6E0F571CB6FFEA000AAA14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E0F561CB6FFEA000AAA14 /* AppDelegate.swift */; };
 		3C6E0F591CB6FFEA000AAA14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E0F581CB6FFEA000AAA14 /* ViewController.swift */; };
 		3C6E0F5C1CB6FFEA000AAA14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6E0F5A1CB6FFEA000AAA14 /* Main.storyboard */; };
@@ -156,6 +157,7 @@
 /* Begin PBXFileReference section */
 		3C1649981CB7364E006AD007 /* ImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		3C1649A71CB73700006AD007 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		3C1649A91CB73B7E006AD007 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3C6E0F531CB6FFEA000AAA14 /* ImageViewModelExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageViewModelExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6E0F561CB6FFEA000AAA14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C6E0F581CB6FFEA000AAA14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			children = (
 				3C6E0F561CB6FFEA000AAA14 /* AppDelegate.swift */,
 				3C6E0F581CB6FFEA000AAA14 /* ViewController.swift */,
+				3C1649A91CB73B7E006AD007 /* TableViewCell.swift */,
 				3C6E0F5A1CB6FFEA000AAA14 /* Main.storyboard */,
 				3C6E0F5D1CB6FFEA000AAA14 /* Assets.xcassets */,
 				3C6E0F5F1CB6FFEA000AAA14 /* LaunchScreen.storyboard */,
@@ -458,6 +461,7 @@
 				3C1649A81CB73700006AD007 /* Utils.swift in Sources */,
 				3C1649991CB7364E006AD007 /* ImageProvider.swift in Sources */,
 				3C860ED71CB708C700A9CA2D /* Models.swift in Sources */,
+				3C1649AA1CB73B7E006AD007 /* TableViewCell.swift in Sources */,
 				3C6E0F591CB6FFEA000AAA14 /* ViewController.swift in Sources */,
 				3C6E0F571CB6FFEA000AAA14 /* AppDelegate.swift in Sources */,
 			);
