@@ -8,7 +8,6 @@
 
 import UIKit
 import ReactiveCocoa
-import ImageViewModel
 import Result
 
 class ViewController: UIViewController {
@@ -18,7 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        usersListViewModel.usersList.producer.startWithNext() { [unowned self] users in
+        usersListViewModel.usersList.producer.startWithNext { [unowned self] users in
             self.tableView.reloadData()
         }
     }
@@ -37,38 +36,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 }
-
-
-class UserTableViewCell: UITableViewCell {
-    let viewModel = UserItemViewModel()
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var userpicImageView: UIImageView!
-    
-    override func awakeFromNib() {
-        self.viewModel.username.producer.startWithNext() {[unowned self] username in
-            self.usernameLabel.text = username
-        }
-        
-        self.viewModel.userpicViewModel.resultImage.producer.startWithNext() {
-            [unowned self] image in
-            self.userpicImageView.image = image
-        }
-        
-        self.viewModel.userpicViewModel.imageTransitionSignal.observeNext() {
-            [unowned self] in
-            let transition = CATransition()
-            transition.type = kCATransitionFade
-            self.imageView?.layer.addAnimation(transition, forKey: nil)
-        }
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        self.viewModel.userpicViewModel.imageViewSize.value = userpicImageView.frame.size
-    }
-}
-
-
 
 class UsersListViewModel {
     let usersList: AnyProperty<[User]>
@@ -90,27 +57,17 @@ class UsersListViewModel {
                 }
             }
             task.resume()
-            disposables += ActionDisposable() { task.cancel() }
+            disposables += ActionDisposable { task.cancel() }
         }
         .flatMapError {_ in return SignalProducer<[[String:AnyObject]], NoError>.empty }
-        .map{ $0.map(User.init) }
+        .map { $0.map(User.init) }
         .observeOn(UIScheduler())
         
         self.usersList = AnyProperty(initialValue: [], producer: usersSignal)
     }
 }
 
-class UserItemViewModel {
-    
-    let userpicViewModel = ImageViewModel(imageProvider: globalImageProvider)
-    let user = MutableProperty<User?>(nil)
-    
-    var username: AnyProperty<String?>
-    
-    init() {
-        self.username = AnyProperty(initialValue: nil, producer: user.producer.map { $0?.username } )
-    }
-}
+
 
 
 

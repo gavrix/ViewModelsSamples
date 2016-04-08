@@ -46,7 +46,7 @@ struct SimpleImageProvider: ImageProvider {
     }
     
     func downloadImageSignal(url: NSURL) -> SignalProducer<UIImage, NSError> {
-        return SignalProducer<UIImage, NSError>() {
+        return SignalProducer<UIImage, NSError> {
             sink, disposables in
             let task = NSURLSession.sharedSession().dataTaskWithURL(url) {
                 data, response, error in
@@ -61,7 +61,7 @@ struct SimpleImageProvider: ImageProvider {
                     }
                 }
             }
-            disposables.addDisposable() {
+            disposables.addDisposable {
                 task.cancel()
             }
             task.resume()

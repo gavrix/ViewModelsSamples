@@ -12,7 +12,7 @@ import Result
 
 extension SignalProducer {
     func ignoreErrors() -> SignalProducer<Value, NoError> {
-        return self.flatMapError() {
+        return self.flatMapError {
             _ in return SignalProducer<Value, NoError>.empty
         }
     }
