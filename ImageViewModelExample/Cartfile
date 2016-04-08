@@ -1,0 +1,2 @@
+git "https://github.com/gavrix/ImageViewModel" "master"
+git "https://github.com/ReactiveCocoa/ReactiveCocoa.git" "v4.0.1"
