@@ -19,19 +19,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3C6E0F6D1CB706FE000AAA14 /* PBXContainerItemProxy */ = {
+		3C1F018D1CEE3F3D00AC6F1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3C6E0F681CB706FE000AAA14 /* ImageViewModel.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3C93D0C91CA428310002C159;
 			remoteInfo = ImageViewModel;
 		};
-		3C6E0F6F1CB706FE000AAA14 /* PBXContainerItemProxy */ = {
+		3C1F018F1CEE3F3D00AC6F1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3C6E0F681CB706FE000AAA14 /* ImageViewModel.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3C93D0D31CA428310002C159;
 			remoteInfo = ImageViewModelTests;
+		};
+		3C1F01941CEE3F9E00AC6F1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C6E0F681CB706FE000AAA14 /* ImageViewModel.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C93D0C81CA428310002C159;
+			remoteInfo = ImageViewModel;
 		};
 		3C6E0F7A1CB70704000AAA14 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -145,13 +152,6 @@
 			remoteGlobalIDString = D047260B19E49F82006002AA;
 			remoteInfo = "ReactiveCocoa-iOS";
 		};
-		3C6E0FA51CB7072A000AAA14 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C6E0F681CB706FE000AAA14 /* ImageViewModel.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 3C93D0C81CA428310002C159;
-			remoteInfo = ImageViewModel;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -165,7 +165,7 @@
 		3C6E0F5D1CB6FFEA000AAA14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C6E0F601CB6FFEA000AAA14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C6E0F621CB6FFEA000AAA14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C6E0F681CB706FE000AAA14 /* ImageViewModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ImageViewModel.xcodeproj; path = Carthage/Checkouts/ImageViewModel/ImageViewModel/ImageViewModel.xcodeproj; sourceTree = "<group>"; };
+		3C6E0F681CB706FE000AAA14 /* ImageViewModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ImageViewModel.xcodeproj; path = Carthage/Checkouts/ImageViewModel/ImageViewModel.xcodeproj; sourceTree = "<group>"; };
 		3C6E0F711CB70704000AAA14 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		3C6E0F861CB70708000AAA14 /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = "<group>"; };
 		3C860ED61CB708C700A9CA2D /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -182,6 +182,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C1F01891CEE3F3D00AC6F1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C1F018E1CEE3F3D00AC6F1A /* ImageViewModel.framework */,
+				3C1F01901CEE3F3D00AC6F1A /* ImageViewModelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		3C6E0F4A1CB6FFEA000AAA14 = {
 			isa = PBXGroup;
 			children = (
@@ -216,15 +225,6 @@
 				3C1649A71CB73700006AD007 /* Utils.swift */,
 			);
 			path = ImageViewModelExample;
-			sourceTree = "<group>";
-		};
-		3C6E0F691CB706FE000AAA14 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3C6E0F6E1CB706FE000AAA14 /* ImageViewModel.framework */,
-				3C6E0F701CB706FE000AAA14 /* ImageViewModelTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		3C6E0F721CB70704000AAA14 /* Products */ = {
@@ -269,9 +269,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				3C1F01951CEE3F9E00AC6F1A /* PBXTargetDependency */,
 				3C6E0FA21CB7072A000AAA14 /* PBXTargetDependency */,
 				3C6E0FA41CB7072A000AAA14 /* PBXTargetDependency */,
-				3C6E0FA61CB7072A000AAA14 /* PBXTargetDependency */,
 			);
 			name = ImageViewModelExample;
 			productName = ImageViewModelExample;
@@ -306,7 +306,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 3C6E0F691CB706FE000AAA14 /* Products */;
+					ProductGroup = 3C1F01891CEE3F3D00AC6F1A /* Products */;
 					ProjectRef = 3C6E0F681CB706FE000AAA14 /* ImageViewModel.xcodeproj */;
 				},
 				{
@@ -326,18 +326,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		3C6E0F6E1CB706FE000AAA14 /* ImageViewModel.framework */ = {
+		3C1F018E1CEE3F3D00AC6F1A /* ImageViewModel.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ImageViewModel.framework;
-			remoteRef = 3C6E0F6D1CB706FE000AAA14 /* PBXContainerItemProxy */;
+			remoteRef = 3C1F018D1CEE3F3D00AC6F1A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3C6E0F701CB706FE000AAA14 /* ImageViewModelTests.xctest */ = {
+		3C1F01901CEE3F3D00AC6F1A /* ImageViewModelTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ImageViewModelTests.xctest;
-			remoteRef = 3C6E0F6F1CB706FE000AAA14 /* PBXContainerItemProxy */;
+			remoteRef = 3C1F018F1CEE3F3D00AC6F1A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		3C6E0F7B1CB70704000AAA14 /* ReactiveCocoa.framework */ = {
@@ -470,6 +470,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3C1F01951CEE3F9E00AC6F1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ImageViewModel;
+			targetProxy = 3C1F01941CEE3F9E00AC6F1A /* PBXContainerItemProxy */;
+		};
 		3C6E0FA21CB7072A000AAA14 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Result-iOS";
@@ -479,11 +484,6 @@
 			isa = PBXTargetDependency;
 			name = "ReactiveCocoa-iOS";
 			targetProxy = 3C6E0FA31CB7072A000AAA14 /* PBXContainerItemProxy */;
-		};
-		3C6E0FA61CB7072A000AAA14 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ImageViewModel;
-			targetProxy = 3C6E0FA51CB7072A000AAA14 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
